@@ -81,11 +81,7 @@ export default class Testimonials extends Component {
     return (
       <Container id='testimonials'>
         <Row className='testimonials justify-content-center'>FEW TESTIMONIALS</Row>
-        <Carousel
-          activeIndex={activeIndex}
-          next={this.next}
-          previous={this.previous}
-        >
+        <Carousel activeIndex={activeIndex} next={this.next} previous={this.previous} >
           <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
           {slides}
         </Carousel>
