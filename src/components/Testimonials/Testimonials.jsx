@@ -31,7 +31,7 @@ const items = [
 export default class Testimonials extends Component {
   state = {
     activeIndex: 0
-  };
+  }
 
   onExiting = () => {
     this.animating = true
@@ -43,13 +43,15 @@ export default class Testimonials extends Component {
 
   next = () => {
     if (this.animating) return
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1
+    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : 
+    this.state.activeIndex + 1
     this.setState({ activeIndex: nextIndex })
   }
 
   previous = () => {
     if (this.animating) return
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1
+    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : 
+    this.state.activeIndex - 1
     this.setState({ activeIndex: nextIndex })
   }
 
